@@ -2,7 +2,7 @@ import { CardElements } from "./cardElements.js"
 const cardElements = CardElements()
 export function Sound (){
 
-  const springMusic = new Audio("./music/brainMusic.3gp")
+  const springMusic = new Audio("https://github.com/ELLDev/timer-with-dark-mode/blob/main/sounds/Chuva.wav?raw=true")
 
   const playMusic = () =>{
     springMusic.play()
