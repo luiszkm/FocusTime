@@ -9,20 +9,23 @@ export function CardControls(){
     card.cardWinter.classList.remove('select-card')
     card.cardSummer.classList.remove('select-card')
   }
+  
   function spring (){
     resetCard()
     card.cardSpring.classList.add('select-card')
     sound.playMusic()
   }
+  
   function storm (){
     resetCard()
     card.cardStorm.classList.add('select-card')
-    sound.musicVolume()
   }
+  
   function winter (){
     resetCard()
     card.cardWinter.classList.add('select-card')
   }
+  
   function summer (){
     resetCard()
     card.cardSummer.classList.add('select-card')
@@ -36,8 +39,3 @@ export function CardControls(){
     summer,
   }
 }
-// var slider = document.getElementById("myRange");
-
-// slider.oninput = function() {
-//  console.log(this.value);
-// }
