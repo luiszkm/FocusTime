@@ -1,0 +1,113 @@
+*{
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  font-size: 62.5%;
+
+  --rage-color:hsl(240, 6%, 21%);
+  --hue:194;
+  --card-selector-color: hsl(var(--hue), 97%, 31%);
+  --card-selector-color-DM: hsl(calc(var(--hue+ 2)), 74%, 15%);
+
+  --hue-content:240;
+  --card-selector-content: hsl(calc(var(--hue-content) - 240), 0%, 100%);
+  --card-selector-content-DM: hsl(var(--hue-content), 7%, 78%);
+
+
+
+
+}
+body{
+  display: grid;
+ justify-self: end;
+ align-self: center;
+ min-height: 100vh;
+  
+}
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 19rem;
+}
+.hide{
+  display: none;
+}
+.modules{
+  position: fixed;
+  top: 6.4rem;
+  right:6.4rem;
+  cursor: pointer;
+}
+#timer{
+  width: 32rem;
+  height: 21rem;
+
+}
+#timer span{
+  font-weight: 500;
+  font-size: 13rem;
+  line-height: 15rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+#timer .controls{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  width: 90%;
+  cursor: pointer;
+}
+.cards{
+  width: 31rem;
+  height:33.6rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.card{
+  display:flex ;
+  position: relative;
+  cursor: pointer;
+}
+.card.select-card svg path {
+  fill: var(--card-selector-color);
+}
+.card.select-card svg path:last-child {
+  fill:var(--card-selector-content);
+}
+.card.select-card .volume{
+  background-color: var(--card-selector-content);
+}
+.card.select-card .volume::-webkit-slider-thumb{
+  background-color: var(--card-selector-content);
+}
+.volume{
+  -webkit-appearance: none;
+  appearance: none;
+  display: inline-block;
+  width: 9rem;
+  height: 0.2em;
+  position: relative;
+  left: 4em;
+  border-radius: 5px;
+  background-color: var(--rage-color);
+  outline: none;
+  position: absolute;
+  bottom: 2.4rem;
+  left: 2.4rem;
+  cursor: grab;
+}
+.volume:-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+.volume::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  width: 1.6rem;
+  height: 1.6rem;
+  background-color: var(--rage-color);
+  border-radius: 60px;
+}
