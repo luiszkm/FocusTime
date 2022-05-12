@@ -24,8 +24,3 @@ cardElements.cardSummer.addEventListener('click', cardControls.summer)
 cardElements.volume.addEventListener('input',() =>{sound.musicVolume(cardElements.volume.value)
   })
 
-
-// () =>{
-//   console.log(cardElements.volume.value);
-//  })
- 
