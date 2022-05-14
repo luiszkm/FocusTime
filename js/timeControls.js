@@ -1,14 +1,15 @@
 import {Elements} from "./timerElements.js"
 import { Timer } from "./timer.js"
-
+import { Sound } from "./sound.js"
 const elements = Elements()
 const timer = Timer()
-
+const sound = Sound()
 //funçoes dos controles do temporizador »»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»
 export function Controls (){
 
   function startPlay() {
     timer.countDown()
+    sound.playStartMusic()
   }
 
   function addFive (){

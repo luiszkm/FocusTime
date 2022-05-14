@@ -7,11 +7,11 @@ export function CardElements (){
   let cardSummer = document.querySelector('#summer')
 
   let volume = document.querySelector('.volume')
-
+  let volumeStorm = document.querySelector('.volumeStorm')
+  let volumeSummer = document.querySelector('.volumeSummer')
+  let volumeWinter = document.querySelector('volmeWinter')
   let volumeValue = volume.value
- function getVolumeValue () {
-   return volume.value
- }
+  
   return {
    cardSpring,
    cardStorm,
@@ -19,7 +19,9 @@ export function CardElements (){
    cardSummer,
    volume,
    volumeValue,
-   getVolumeValue
+   volumeStorm,
+   volumeSummer,
+   volumeWinter
   }
 }
 
