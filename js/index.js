@@ -3,12 +3,14 @@ import { Controls } from "./timeControls.js"
 import { CardElements } from "./cardElements.js"
 import { CardControls } from "./cardControls.js"
 import { Sound } from "./sound.js"
+import { Modes } from "./modes.js"
 
 const sound = Sound()
 const cardControls = CardControls()
 const cardElements = CardElements()
 const elements = Elements()
 const controls = Controls()
+const modes = Modes()
 
 //Eventos »»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»
 

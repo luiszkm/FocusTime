@@ -31,9 +31,11 @@ export function Sound() {
     stormMusic.play()
   }
   const playSummerMusic = () => {
+    pauseMusic()
     summerMusic.play()
   }
   const playWinterMusic = () =>{
+    pauseMusic()
     winterMusic.play()
   }
   /*Volmes Fcunctions »»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»» */
@@ -46,7 +48,7 @@ export function Sound() {
   const volumeSummer = musicVolume =>{
     summerMusic.volume = musicVolume
   }
-  const volumeWinterMusic= musicVolume =>{
+  const volumeWinter= musicVolume =>{
     winterMusic.volume = musicVolume
   }
 /*Volume Buttons »»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»» */
@@ -65,7 +67,7 @@ const playClickSound = () =>{
     playSummerMusic,
     volumeSummer,
     playWinterMusic,
-    volumeWinterMusic,
+    volumeWinter,
     playStartMusic,
     playClickSound
   }

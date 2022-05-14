@@ -9,25 +9,32 @@ export function Controls (){
 
   function startPlay() {
     timer.countDown()
-    sound.playStartMusic()
+    sound.playClickSound()
+    elements.btnStartDisable.classList.remove('hide')
+    elements.btnStart.classList.add('hide')
   }
 
   function addFive (){
     elements.minutes = Number(elements.displayMinutes.innerHTML)
     elements.seconds = Number(elements.displaySeconds.innerHTML)
     timer.updateDisplayTimer(elements.minutes + 5, elements.seconds)
+    sound.playStartMusic()
   }
   
   function removeFive(){
     elements.minutes = Number(elements.displayMinutes.innerHTML)
     elements.seconds = Number(elements.displaySeconds.innerHTML)
     timer.updateDisplayTimer(elements.minutes - 5, elements.seconds)
+    sound.playStartMusic()
   }
 
   function stopTime (){
     timer.stopTime()
+    sound.playClickSound()
+    elements.btnStartDisable.classList.add('hide')
+    elements.btnStart.classList.remove('hide')
   }
-
+ 
 return{
   startPlay,
   addFive,

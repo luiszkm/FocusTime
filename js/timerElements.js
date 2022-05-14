@@ -1,6 +1,7 @@
 
 export function Elements(){
   let btnStart = document.querySelector('#start')
+  let btnStartDisable = document.querySelector('#startDisabled')
   let btnStop = document.querySelector('#stop')
   let btnMore = document.querySelector('#more')
   let btnless = document.querySelector('#less')
@@ -12,6 +13,7 @@ export function Elements(){
 
   return{
     btnStart,
+    btnStartDisable,
     btnStop,
     btnMore,
     btnless,

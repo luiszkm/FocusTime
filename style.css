@@ -1,91 +1,100 @@
-*{
+* {
   margin: 0;
   border: 0;
   padding: 0;
   box-sizing: border-box;
 }
-:root{
+:root {
   font-size: 62.5%;
 
-  --rage-color:hsl(240, 6%, 21%);
-  --hue:194;
+  --rage-color: hsl(240, 6%, 21%);
+  --hue: 194;
   --card-selector-color: hsl(var(--hue), 97%, 31%);
-  --card-selector-color-DM: hsl(calc(var(--hue+ 2)), 74%, 15%);
+  --card-selector-color-DM: hsl(calc(var(--hue) + 2), 74%, 15%);
 
-  --hue-content:240;
+  --hue-content: 240;
   --card-selector-content: hsl(calc(var(--hue-content) - 240), 0%, 100%);
   --card-selector-content-DM: hsl(var(--hue-content), 7%, 78%);
 
-
-
-
+  --bg-dark-mode: hsla(240, 5%, 7%, 1);
+  --color-contetn-dark-mode: #ffffff;
+  --color-card-dark-mode: hsla(240, 6%, 17%, 1);
 }
-body{
+body {
   display: grid;
- justify-self: end;
- align-self: center;
- min-height: 100vh;
-  
+  justify-self: end;
+  align-self: center;
+  min-height: 100vh;
 }
-main{
+main {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 19rem;
+  max-width: 90rem;
+  width: 100%;
+  margin: 0 auto;
 }
-.hide{
+.hide {
   display: none;
 }
-.modules{
-  position: fixed;
+.modes {
+  position: absolute;
   top: 6.4rem;
-  right:6.4rem;
+  right: 6.4rem;
   cursor: pointer;
 }
-#timer{
+.display{
+text-align: center;
+}
+
+#timer {
   width: 32rem;
   height: 21rem;
-
 }
-#timer span{
+#timer span {
   font-weight: 500;
   font-size: 13rem;
   line-height: 15rem;
   text-align: center;
   text-transform: uppercase;
 }
-#timer .controls{
+#timer .controls {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 4rem;
-  width: 90%;
+  gap: 4rem;  
+  padding:  0 1rem;
+  width: 100%;
   cursor: pointer;
 }
-.cards{
+.cards {
   width: 31rem;
-  height:33.6rem;
+  height: 33.6rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+
 }
-.card{
-  display:flex ;
+.card {
+  display: flex;
   position: relative;
   cursor: pointer;
+  align-items: center;
+  justify-content: center;
 }
 .card.select-card svg path {
   fill: var(--card-selector-color);
 }
 .card.select-card svg path:last-child {
-  fill:var(--card-selector-content);
+  fill: var(--card-selector-content);
 }
-.card.select-card .volume{
+.card.select-card .volume {
   background-color: var(--card-selector-content);
 }
-.card.select-card .volume::-webkit-slider-thumb{
+.card.select-card .volume::-webkit-slider-thumb {
   background-color: var(--card-selector-content);
 }
-.volume{
+.volume {
   -webkit-appearance: none;
   appearance: none;
   display: inline-block;
@@ -104,10 +113,50 @@ main{
 .volume:-webkit-slider-thumb {
   -webkit-appearance: none;
 }
-.volume::-webkit-slider-thumb{
+.volume::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 1.6rem;
   height: 1.6rem;
   background-color: var(--rage-color);
   border-radius: 60px;
+}
+/*Dark mode style »»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»*/
+.darkMode {
+  background-color: var(--bg-dark-mode);
+}
+.darkModeText {
+  color: var(--color-contetn-dark-mode);
+}
+.controlsDarkMode svg path {
+  fill: var(--color-contetn-dark-mode);
+}
+.card.cardDarkMode svg path {
+  fill: var(--color-card-dark-mode);
+}
+.card.cardDarkMode svg path:last-child {
+  fill: var(--color-contetn-dark-mode);
+}
+.card.cardDarkMode .volume {
+  background-color: var(--card-selector-content);
+}
+.card.cardDarkMode .volume::-webkit-slider-thumb {
+  background-color: var(--card-selector-content);
+}
+
+.cardDarkMode.select-card svg path {
+  fill: var(--card-selector-color-DM);
+}
+
+@media (max-width: 860px ){
+  main{
+   flex-direction: column;
+   align-items: center;
+   gap: 3rem;
+   margin-top: 3.5rem;
+ 
+  }
+  .modes{
+    top: 1rem;
+    right: 1rem;
+  }
 }

@@ -9,7 +9,7 @@ export function CardElements (){
   let volume = document.querySelector('.volume')
   let volumeStorm = document.querySelector('.volumeStorm')
   let volumeSummer = document.querySelector('.volumeSummer')
-  let volumeWinter = document.querySelector('volmeWinter')
+  let volumeWinter = document.querySelector('.volumeWinter')
   let volumeValue = volume.value
   
   return {
