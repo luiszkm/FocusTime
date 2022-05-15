@@ -8,6 +8,8 @@ let btnLigthMode = document.querySelector('.ligthMode')
 let btnDarkMode = document.querySelector('.darkMode')
 let display = document.querySelector('.display')
 let controls = document.querySelector('.controls')
+let footer = document.querySelector('footer')
+let small = document.querySelector('small')
 
 btnLigthMode.addEventListener('click', darkMode)
 btnDarkMode.addEventListener('click' ,ligthMode)
@@ -19,6 +21,8 @@ function darkMode(){
   document.body.classList.add('darkMode')
   display.classList.add('darkModeText')
   controls.classList.add('controlsDarkMode')
+  footer.classList.add('darkModeFooter')
+  small.classList.add('darkModeText')
   cardAddDarkMode()
 }
 function ligthMode () {
@@ -27,6 +31,9 @@ function ligthMode () {
   document.body.classList.remove('darkMode')
   display.classList.remove('darkModeText')
   controls.classList.remove('controlsDarkMode')
+  footer.classList.remove('darkModeFooter')
+  small.classList.remove('darkModeText')
+
   cardRemoveDarkMode()
 
 }
@@ -48,6 +55,7 @@ function cardRemoveDarkMode (){
   btnDarkMode,
   display,
   controls,
+  footer,
   darkMode,
   ligthMode,
   cardAddDarkMode,

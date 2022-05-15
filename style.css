@@ -50,7 +50,7 @@ main {
 
 #timer {
   width: 32rem;
-  height: 21rem;
+  max-height: 21rem;
 }
 #timer span {
   font-weight: 500;
@@ -74,6 +74,7 @@ main {
   max-height: 33.6rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
  
 }
 .card {
@@ -120,6 +121,26 @@ main {
   background-color: var(--rage-color);
   border-radius: 60px;
 }
+footer{ 
+  width: 100%;
+  max-height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 2px;
+  gap: 2rem;
+}
+footer .contact{display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--primary-color);
+}
+small{
+  font-size: 1.4rem;
+}
+
 /*Dark mode style »»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»*/
 .darkMode {
   background-color: var(--bg-dark-mode);
@@ -146,12 +167,15 @@ main {
 .cardDarkMode.select-card svg path {
   fill: var(--card-selector-color-DM);
 }
+.darkModeFooter{
+  background-color: var(--color-card-dark-mode);
+}
 
 @media (max-width: 860px) {
   main {
     flex-direction: column;
     align-items: center;
-    gap: 3rem;
+    gap: 2rem;
     margin-top: 3.5rem;
   }
   .modes {
@@ -161,6 +185,11 @@ main {
   #timer .display span {
     font-size: 8rem;
   }
+
+ 
+ 
+}@media (max-width:600px){
+ 
   .cards {
     max-width: 16rem;
     grid-template-rows: 1fr 1fr;
@@ -174,7 +203,7 @@ main {
   .volume {
     width: 6rem;
     bottom: 1.5rem;
-    left: 2.1rem;
+    left: 1.5rem;
   }
   .volume::-webkit-slider-thumb {
     -webkit-appearance: none;
@@ -182,5 +211,10 @@ main {
     height: 1rem;
     background-color: var(--rage-color);
     border-radius: 60px;
+  }
+  #timer .controls {
+    justify-content: center;
+    gap: 2rem;
+   
   }
 }
