@@ -15,6 +15,7 @@ const winterMusic = new Audio('https://github.com/ELLDev/timer-with-dark-mode/bl
 /*Music Buttons »»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»» */
 const startMusic = new Audio('https://github.com/ELLDev/timer-with-dark-mode/blob/main/sounds/Play.wav?raw=true')
 const clickSound = new Audio('https://github.com/ELLDev/timer-with-dark-mode/blob/main/sounds/Click.wav?raw=true')
+
 export function Sound() {
   const pauseMusic = () => {
     springMusic.pause()
@@ -25,10 +26,13 @@ export function Sound() {
   const playMusic = () => {
     pauseMusic()
     springMusic.play()
+    
+   
   }
   const playStormMusic = () => {
     pauseMusic()
     stormMusic.play()
+    startMusic.loop()
   }
   const playSummerMusic = () => {
     pauseMusic()
@@ -37,6 +41,7 @@ export function Sound() {
   const playWinterMusic = () =>{
     pauseMusic()
     winterMusic.play()
+    musicLoop()
   }
   /*Volmes Fcunctions »»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»» */
   const musicVolume = musicVolume => {
@@ -57,6 +62,7 @@ const playStartMusic =() =>{
 }
 const playClickSound = () =>{
   clickSound.play()
+  
 }
   return {
     playMusic,

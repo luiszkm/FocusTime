@@ -177,6 +177,7 @@ small{
     align-items: center;
     gap: 2rem;
     margin-top: 3.5rem;
+
   }
   .modes {
     top: 1rem;
@@ -189,7 +190,9 @@ small{
  
  
 }@media (max-width:600px){
- 
+ main{
+   min-height: 80vh;
+ }
   .cards {
     max-width: 16rem;
     grid-template-rows: 1fr 1fr;
