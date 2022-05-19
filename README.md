@@ -3,6 +3,9 @@
 
 Temporizaor pomodoro para controle de tarefas
 
+## Demonstração
+
+
 ## Instalação
 
 Para a visualização não é preciso instalar nada, basta
@@ -18,7 +21,7 @@ navegar pelo codigo recomendo usar o VSCode
 
 ## Autores
 
-- [@luis_yoshi](https://www.github.com/octokatherine)
+- [Luis Soares](https://www.linkedin.com.)
 
 
 ## Funcionalidades
@@ -26,12 +29,12 @@ navegar pelo codigo recomendo usar o VSCode
 - Temas dark e light
 - Card com musica
 - Conrole de Volume
-- Temporizador(play/pause/add 5 minutes / emove 5 minutes)
+- Temporizador(play/pause/add 5 minutes / remove 5 minutes)
 
 
 ## Aprendizados
 
-Com este projeto aprendi a modularizar deixando-o mais limpo,
+Com este projeto aprendi a modularizar o código deixando-o mais limpo,
 o maior desafio foi criar o controlador de volume
 
 ## 🛠 Habilidades
@@ -42,7 +45,7 @@ Javascript, HTML, CSS
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/)
 
 
-## Demonstração
 
-Insira um gif ou um link de alguma demonstração
+
+
 
