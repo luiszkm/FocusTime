@@ -10,18 +10,24 @@ export function CardElements (){
   let volumeStorm = document.querySelector('.volumeStorm')
   let volumeSummer = document.querySelector('.volumeSummer')
   let volumeWinter = document.querySelector('.volumeWinter')
-  let volumeValue = volume.value
   
+ function setVolume(){
+   volume.value = 0.5 
+   volumeStorm.value = 0.5
+   volumeSummer.value = 0.5
+   volumeWinter.value = 0.5
+ }
+
   return {
    cardSpring,
    cardStorm,
    cardWinter,
    cardSummer,
    volume,
-   volumeValue,
    volumeStorm,
    volumeSummer,
-   volumeWinter
+   volumeWinter,
+   setVolume
   }
 }
 

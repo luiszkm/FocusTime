@@ -1,6 +1,8 @@
 import {Elements} from "./timerElements.js"
 import { Timer } from "./timer.js"
 import { Sound } from "./sound.js"
+import { CardElements } from "./cardElements.js"
+const cardElements =CardElements()
 const elements = Elements()
 const timer = Timer()
 const sound = Sound()
@@ -12,6 +14,7 @@ export function Controls (){
     sound.playClickSound()
     elements.btnStartDisable.classList.remove('hide')
     elements.btnStart.classList.add('hide')
+    cardElements.setVolume()
   }
 
   function addFive (){

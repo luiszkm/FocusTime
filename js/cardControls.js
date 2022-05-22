@@ -9,38 +9,42 @@ export function CardControls() {
     card.cardStorm.classList.remove('select-card')
     card.cardWinter.classList.remove('select-card')
     card.cardSummer.classList.remove('select-card')
-    resetVolume()
+  
   }
 
   function spring() {
       sound.pauseMusic()
+      // card.setVolume()
       card.cardSpring.classList.add('select-card')
       sound.playStormMusic()
+      sound.backVolume()
+    
   }
 
   function storm() {
       sound.pauseMusic()
+     
       card.cardStorm.classList.add('select-card')
       sound.playMusic() 
+      sound.backVolume()
   }
 
   function winter() {
       sound.pauseMusic()
+    
       card.cardWinter.classList.add('select-card')
       sound.playWinterMusic()
+      sound.backVolume()
   }
   function summer() {
       sound.pauseMusic() 
+    
       card.cardSummer.classList.add('select-card')
       sound.playSummerMusic()
+      sound.backVolume()
     
   }
-  function resetVolume() {
-    if (card.volume.classList.contains('select-card')) {
-      card.volume.value = 0.1
-    } else {
-    }
-  }
+ 
  
   return {
     resetCard,
@@ -48,6 +52,6 @@ export function CardControls() {
     storm,
     winter,
     summer,
-    resetVolume
+
   }
 }

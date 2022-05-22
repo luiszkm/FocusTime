@@ -26,6 +26,7 @@ export function Sound() {
     summerMusic.pause()
     winterMusic.pause()
     cardControls.resetCard()
+
   }
   const playMusic = () => {
     springMusic.play()
@@ -38,10 +39,19 @@ export function Sound() {
   }
   const playWinterMusic = () =>{
     winterMusic.play()
-    musicLoop()
+
+  }
+  function backVolume(){
+    
+    volumeSpring(cardElements.volume.value)
+   cardElements.volumeStorm.value = volumeStorm()
+   cardElements.volumeSummer.value = volumeSummer()
+   cardElements.volumeWinter.value = volumeWinter()
+   console.log(cardElements.volume.value = musicVolume());
+  
   }
   /*Volmes Fcunctions »»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»» */
-  const musicVolume = musicVolume => {
+  const volumeSpring = musicVolume => {
     springMusic.volume = musicVolume
   }
   const volumeStorm = musicVolume => {
@@ -64,7 +74,7 @@ const playClickSound = () =>{
   return {
     playMusic,
     pauseMusic,
-    musicVolume,
+    volumeSpring,
     playStormMusic,
     volumeStorm,
     playSummerMusic,
@@ -72,6 +82,7 @@ const playClickSound = () =>{
     playWinterMusic,
     volumeWinter,
     playStartMusic,
-    playClickSound
+    playClickSound,
+    backVolume
   }
 }
