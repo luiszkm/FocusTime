@@ -24,6 +24,10 @@ cardElements.cardStorm.addEventListener('click', cardControls.storm)
 cardElements.cardWinter.addEventListener('click', cardControls.winter)
 cardElements.cardSummer.addEventListener('click', cardControls.summer)
 
+cardElements.cardSpring.addEventListener('dblclick', sound.pauseMusic)
+cardElements.cardStorm.addEventListener('dblclick', sound.pauseMusic)
+cardElements.cardWinter.addEventListener('dblclick', sound.pauseMusic)
+cardElements.cardSummer.addEventListener('dblclick', sound.pauseMusic)
 /*Regulador de Voluems »»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»» */
 cardElements.volumeStorm.addEventListener('input',() =>{sound.musicVolume(cardElements.volumeStorm.value)
 })

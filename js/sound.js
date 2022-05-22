@@ -1,5 +1,7 @@
 import { CardElements } from './cardElements.js'
+import { CardControls } from './cardControls.js'
 
+const cardControls = CardControls()
 const cardElements = CardElements()
 /*Music Cards »»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»» */
 const springMusic = new Audio(
@@ -17,29 +19,24 @@ const startMusic = new Audio('https://github.com/ELLDev/timer-with-dark-mode/blo
 const clickSound = new Audio('https://github.com/ELLDev/timer-with-dark-mode/blob/main/sounds/Click.wav?raw=true')
 
 export function Sound() {
+
   const pauseMusic = () => {
     springMusic.pause()
     stormMusic.pause()
     summerMusic.pause()
     winterMusic.pause()
+    cardControls.resetCard()
   }
   const playMusic = () => {
-    pauseMusic()
     springMusic.play()
-    
-   
   }
   const playStormMusic = () => {
-    pauseMusic()
     stormMusic.play()
-    startMusic.loop()
   }
   const playSummerMusic = () => {
-    pauseMusic()
     summerMusic.play()
   }
   const playWinterMusic = () =>{
-    pauseMusic()
     winterMusic.play()
     musicLoop()
   }
